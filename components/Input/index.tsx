@@ -1,7 +1,22 @@
 import React from 'react'
 
-export default function Input() {
+interface InputProps {
+  blue?: boolean;
+  backgroundColor?: string;
+  label: string;
+}
+
+export default function Input({
+  blue = false,
+  backgroundColor,
+  label,
+  ...props
+}: InputProps) {
   return (
-    <input value="test" />
+    <input
+      value={label}
+      style={{ backgroundColor }}
+      {...props}
+    />
   )
 }
