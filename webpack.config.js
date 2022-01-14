@@ -1,16 +1,18 @@
 const path = require('path');
 const fs = require('fs')
-let files = []
-fs.readdir('./components', (err, files) => {
-  const result = files.filter(file => file !== 'index.js')
-  
+let entry = {app: './index.js'}
+
+const filenames = fs.readdirSync('./components');
+const result = filenames.filter(file => file !== 'index.js')
+result.forEach(file => {
+  entry[`lib/${file}/index`] = `./components/${file}`
 })
 
 module.exports = {
   mode: 'production',
-  entry: {
-    app: './index.js',
-    'lib/Input/index': './components/Input',
+  entry,
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -18,4 +20,16 @@ module.exports = {
     clean: true,
     libraryTarget: 'umd',
   },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        }
+      }
+    ]
+  }
 };
+
