@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs')
-let entry = {app: './index.js'}
+let entry = {index: './index.js'}
 
 const filenames = fs.readdirSync('./components');
 const result = filenames.filter(file => file !== 'index.js')
