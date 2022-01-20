@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface InputProps {
+export interface FormInputProps {
   blue?: boolean;
   backgroundColor?: string;
   label: string;
@@ -11,7 +11,7 @@ export default function Input({
   backgroundColor,
   label,
   ...props
-}: InputProps) {
+}: FormInputProps) {
   return (
     <input
       value={label}
