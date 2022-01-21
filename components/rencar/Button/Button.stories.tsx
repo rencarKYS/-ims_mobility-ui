@@ -9,9 +9,31 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-export const RencarButton = Template.bind({})
+export const Default = Template.bind({})
+export const Outline = Template.bind({})
+export const DefaultBorder = Template.bind({})
+export const OutlineBorder = Template.bind({})
 
-RencarButton.args = {
-  label: "Button",
+Default.args = {
+  label: "Default",
   disabled: false,
+}
+
+Outline.args = {
+  label: "Outline",
+  disabled: false,
+  outline: true,
+}
+
+DefaultBorder.args = {
+  label: "Radius",
+  disabled: false,
+  style: { borderRadius: '5px' }
+}
+
+OutlineBorder.args = {
+  label: "Radius",
+  disabled: false,
+  outline: true,
+  style: { borderRadius: '5px' }
 }
