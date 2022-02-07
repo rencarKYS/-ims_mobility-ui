@@ -21,6 +21,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
+  externals: {
+    "styled-component": {
+      commonjs: "styled-component",
+      commonjs2: "styled-component",
+      amd: "styled-component",
+      root: "styled-component",
+    }
+  },
   devServer: {
     hot: true
   },
