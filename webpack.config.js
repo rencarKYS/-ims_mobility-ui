@@ -22,11 +22,11 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   externals: {
-    "styled-component": {
-      commonjs: "styled-component",
-      commonjs2: "styled-component",
-      amd: "styled-component",
-      root: "styled-component",
+    "styled-components": {
+      commonjs: "styled-components",
+      commonjs2: "styled-components",
+      amd: "styled-components",
+      root: "styled-components",
     }
   },
   devServer: {
