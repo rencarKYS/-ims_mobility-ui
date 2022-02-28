@@ -5,7 +5,7 @@ export interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  children: string;
   className?: string;
   /**
    * Button inline style
@@ -52,7 +52,7 @@ const ButtonStyle = styled.button`
 `
 
 export default function Button({
-  label,
+  children,
   disabled,
   outline,
   className,
@@ -67,7 +67,7 @@ export default function Button({
       style={style}
       onClick={onClick}
     >
-      {label}
+      {children}
     </ButtonStyle>
   )
 }
