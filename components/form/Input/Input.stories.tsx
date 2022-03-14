@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Input from './index'
 
 export default {
-  title: "Example/Input",
+  title: "Example/IMSForm/Input",
   component: Input,
   argTypes: {
     backgroundColor: { control: 'color' },

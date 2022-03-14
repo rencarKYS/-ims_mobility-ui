@@ -1,22 +1,9 @@
 import React from 'react'
+import CommonInput from '../../../packages/Input'
+import { InputProps } from 'packages/Input'
 
-export interface FormInputProps {
-  blue?: boolean;
-  backgroundColor?: string;
-  label: string;
-}
-
-export default function Input({
-  blue = false,
-  backgroundColor,
-  label,
-  ...props
-}: FormInputProps) {
+export default function Input(props: InputProps) {
   return (
-    <input
-      value={label}
-      style={{ backgroundColor }}
-      {...props}
-    />
+    <CommonInput {...props} />
   )
 }
