@@ -7,7 +7,7 @@
     "checkJs": true, 
     "baseUrl": ".",
     "outDir": "dist",
-    "rootDir": "/",
+    "rootDir": "./",
     "module": "commonjs",
     "strict": true,
     "jsx": "react",

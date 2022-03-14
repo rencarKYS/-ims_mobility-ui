@@ -13,4 +13,5 @@ export const RencarInput = Template.bind({});
 
 RencarInput.args = {
   placeholder: "입력하세요",
+  type: 'radio'
 };
