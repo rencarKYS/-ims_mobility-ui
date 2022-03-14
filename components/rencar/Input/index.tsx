@@ -1,13 +1,11 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import CommonInput from '../../../packages/Input'
 import { InputProps } from 'packages/Input'
 
-function Input(props: InputProps) {
-  const inputRef = useRef(null)
-  console.log(inputRef, 123)
+function Input(props: InputProps, ref: React.Ref<HTMLInputElement>) {
   return (
-    <CommonInput {...props} ref={inputRef} />
+    <CommonInput {...props} ref={ref} />
   )
 }
 
-export default Input
+export default React.forwardRef(Input)

@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { InputProps } from 'packages/Input';
-declare function Input(props: InputProps): JSX.Element;
-export default Input;
+declare const _default: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<HTMLInputElement>>;
+export default _default;
