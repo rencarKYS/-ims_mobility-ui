@@ -1,6 +1,6 @@
 import React from 'react'
 import CommonInput from '../../../packages/Input'
-import { InputProps } from 'packages/Input'
+import type { InputProps } from '../../../packages/Input'
 
 function Input(props: InputProps, ref: React.Ref<HTMLInputElement>) {
   return (
